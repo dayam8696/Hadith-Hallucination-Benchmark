@@ -1,0 +1,6 @@
+pandas
+nltk
+sentence-transformers
+requests
+tqdm
+numpy
