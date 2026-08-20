@@ -26,11 +26,31 @@ def load_prompt_template(lang: str) -> str:
         return f.read()
 
 
+REASONING_MODEL_HINTS = ["deepseek", "r1", "qwq", "o1", "qwen3"]
+
+
 def call_ollama(model: str, prompt: str) -> str:
+    # Reasoning models (e.g. deepseek-r1) spend part of num_predict on a
+    # hidden "thinking" trace before writing the visible answer -- a tight
+    # token cap can run out mid-thought, cutting the real answer short. Give
+    # those models a much larger budget; other models keep a tight cap to
+    # prevent runaway repetition.
+    is_reasoning_model = any(hint in model.lower() for hint in REASONING_MODEL_HINTS)
+    num_predict = 4000 if is_reasoning_model else 300
+
     response = requests.post(
         OLLAMA_URL,
-        json={"model": model, "prompt": prompt, "stream": False},
-        timeout=120,
+        json={
+            "model": model,
+            "prompt": prompt,
+            "stream": False,
+            "options": {
+                "num_predict": num_predict,
+                "repeat_penalty": 1.3,
+                "temperature": 0.2,
+            },
+        },
+        timeout=420,
     )
     response.raise_for_status()
     return response.json().get("response", "").strip()

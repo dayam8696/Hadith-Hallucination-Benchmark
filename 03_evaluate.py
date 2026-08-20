@@ -1,45 +1,98 @@
 """
-Evaluate an LLM results CSV against ground truth using BLEU (text match)
-and multilingual sentence-embedding cosine similarity (theme match).
+Evaluate an LLM results CSV against ground truth.
+
+Text match (word match) is computed for every row using BLEU (nltk
+sentence_bleu with smoothing) -- strict n-gram overlap, so it naturally
+scores near zero for unrelated/fabricated content in both languages.
+
+Theme match (semantic/meaning match) is computed only for English rows,
+using multilingual sentence-embedding cosine similarity
+(sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2). Arabic is
+scored on word/text match (BLEU) alone.
+
+Rows where the model refused to answer or asked for clarification instead
+of producing a hadith (e.g. "I don't have access to...", "Please provide
+the reference", "لا أستطيع مساعدتك") are detected before scoring and
+labeled "refused" directly, without being scored against ground truth.
 
 Usage:
-    python 03_evaluate.py --file results/mistral_english.csv
+    python 03_evaluate.py --file results/mistral-7b_english.csv
+    python 03_evaluate.py --file results/mistral-7b_arabic.csv
 """
 
 import argparse
 import os
 
 import nltk
-import numpy as np
 import pandas as pd
 from nltk.translate.bleu_score import SmoothingFunction, sentence_bleu
 from sentence_transformers import SentenceTransformer, util
-from tqdm import tqdm
 
 EMBEDDING_MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
-BLEU_THRESHOLD = 0.4
-COSINE_HIGH_THRESHOLD = 0.8
-COSINE_LOW_THRESHOLD = 0.5
+TEXT_MATCH_THRESHOLD = 0.4
+THEME_HIGH_THRESHOLD = 0.8
+THEME_LOW_THRESHOLD = 0.5
+
+REFUSAL_PHRASES_EN = [
+    "i do not have direct access",
+    "i don't have direct access",
+    "i do not have access to",
+    "i don't have access to",
+    "i am unable to verify",
+    "i'm unable to verify",
+    "please provide the reference",
+    "please go ahead and provide",
+    "i'm ready to provide",
+    "i am ready to provide",
+    "what is the reference",
+    "i cannot help you with that",
+    "i can't help you with that",
+    "large language model, i don't have",
+    "large language model, i do not have",
+    "i will wait for your confirmation",
+    "please provide me with the",
+    "could you provide the reference",
+]
+
+REFUSAL_PHRASES_AR = [
+    "لا أستطيع مساعدتك",
+    "لا يمكنني مساعدتك",
+    "لا يوجد محتوى",
+    "لا أملك",
+    "ليس لدي",
+    "غير قادر على",
+    "من فضلك زودني",
+    "الرجاء تزويدي",
+    "يرجى تزويدي",
+    "لا يمكنني تقديم",
+]
+
+# A response that hedges ("I'm ready to provide...") but then still goes on
+# to fabricate a hadith is a hallucination, not a refusal -- only short
+# responses dominated by the refusal phrase itself count as a true refusal.
+REFUSAL_MAX_LENGTH = 150
 
 
 def ensure_nltk_punkt():
     try:
         nltk.data.find("tokenizers/punkt")
     except LookupError:
-        nltk.download("punkt")
-    try:
-        nltk.data.find("tokenizers/punkt_tab")
-    except LookupError:
         try:
-            nltk.download("punkt_tab")
+            nltk.download("punkt")
         except Exception:
             pass
 
 
+def is_refusal(response: str, lang: str) -> bool:
+    text = response.strip()
+    if not text or len(text) > REFUSAL_MAX_LENGTH:
+        return False
+    phrases = REFUSAL_PHRASES_EN if lang == "english" else REFUSAL_PHRASES_AR
+    return any(phrase.lower() in text.lower() for phrase in phrases)
+
+
 def compute_bleu(reference: str, hypothesis: str, smoothing) -> float:
-    if not isinstance(reference, str) or not isinstance(hypothesis, str):
-        return 0.0
     ref_tokens = reference.split()
     hyp_tokens = hypothesis.split()
     if not ref_tokens or not hyp_tokens:
@@ -47,19 +100,23 @@ def compute_bleu(reference: str, hypothesis: str, smoothing) -> float:
     return sentence_bleu([ref_tokens], hyp_tokens, smoothing_function=smoothing)
 
 
-def classify(bleu: float, cosine: float) -> str:
-    if cosine < COSINE_LOW_THRESHOLD:
+def classify_english(text_score: float, theme_score: float) -> str:
+    if theme_score < THEME_LOW_THRESHOLD:
         return "hallucinated"
-    if bleu > BLEU_THRESHOLD and cosine > COSINE_HIGH_THRESHOLD:
+    if text_score > TEXT_MATCH_THRESHOLD and theme_score > THEME_HIGH_THRESHOLD:
         return "correct"
-    if bleu < BLEU_THRESHOLD and cosine > COSINE_HIGH_THRESHOLD:
+    if text_score < TEXT_MATCH_THRESHOLD and theme_score > THEME_HIGH_THRESHOLD:
         return "theme_only"
     return "partial"
 
 
+def classify_arabic(text_score: float) -> str:
+    return "correct" if text_score > TEXT_MATCH_THRESHOLD else "hallucinated"
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--file", required=True, help="Path to results CSV, e.g. results/mistral_english.csv")
+    parser.add_argument("--file", required=True, help="Path to results CSV, e.g. results/mistral-7b_english.csv")
     args = parser.parse_args()
 
     ensure_nltk_punkt()
@@ -68,41 +125,61 @@ def main():
     lang = df["lang"].iloc[0] if "lang" in df.columns and len(df) else "english"
     ground_truth_col = "ground_truth_en" if lang == "english" else "ground_truth_ar"
 
-    smoothing = SmoothingFunction().method1
-    print(f"Loading embedding model: {EMBEDDING_MODEL_NAME}")
-    embedder = SentenceTransformer(EMBEDDING_MODEL_NAME)
-
-    bleu_scores = []
-    cosine_scores = []
-    labels = []
-
     responses = df["llm_response"].fillna("").astype(str).tolist()
     references = df[ground_truth_col].fillna("").astype(str).tolist()
 
-    print("Computing embeddings...")
-    response_embeddings = embedder.encode(responses, convert_to_tensor=True, show_progress_bar=True)
-    reference_embeddings = embedder.encode(references, convert_to_tensor=True, show_progress_bar=True)
+    error_mask = [r.strip().upper() == "ERROR" or not r.strip() for r in responses]
+    refusal_mask = [is_refusal(r, lang) for r in responses]
+    skip_mask = [error_mask[i] or refusal_mask[i] for i in range(len(df))]
 
-    print("Computing BLEU and cosine scores...")
-    for i in tqdm(range(len(df))):
-        reference = references[i]
-        hypothesis = responses[i]
+    n_refused = sum(refusal_mask)
+    if n_refused:
+        print(f"Detected {n_refused} refusal/non-answer response(s) -- these will be labeled 'refused' and excluded from scoring.")
 
-        if hypothesis.strip().upper() == "ERROR" or not hypothesis.strip():
-            bleu = 0.0
-            cosine = 0.0
+    print("Computing text match (BLEU)...")
+    smoothing = SmoothingFunction().method1
+    text_match_scores = []
+    for i in range(len(df)):
+        if skip_mask[i]:
+            text_match_scores.append(0.0)
         else:
-            bleu = compute_bleu(reference, hypothesis, smoothing)
+            text_match_scores.append(compute_bleu(references[i], responses[i], smoothing))
+
+    df["text_match_score"] = text_match_scores
+
+    if lang == "english":
+        print(f"Computing theme match (cosine similarity, model={EMBEDDING_MODEL_NAME})...")
+        embedder = SentenceTransformer(EMBEDDING_MODEL_NAME)
+        safe_responses = [r if r.strip() else " " for r in responses]
+        safe_references = [r if r.strip() else " " for r in references]
+        response_embeddings = embedder.encode(safe_responses, convert_to_tensor=True, show_progress_bar=True)
+        reference_embeddings = embedder.encode(safe_references, convert_to_tensor=True, show_progress_bar=True)
+
+        theme_match_scores = []
+        for i in range(len(df)):
+            if skip_mask[i]:
+                theme_match_scores.append(0.0)
+                continue
             cosine = float(util.cos_sim(response_embeddings[i], reference_embeddings[i]).item())
-            cosine = max(0.0, min(1.0, cosine))
+            theme_match_scores.append(max(0.0, min(1.0, cosine)))
 
-        bleu_scores.append(bleu)
-        cosine_scores.append(cosine)
-        labels.append(classify(bleu, cosine))
-
-    df["bleu_score"] = bleu_scores
-    df["cosine_score"] = cosine_scores
-    df["label"] = labels
+        df["theme_match_score"] = theme_match_scores
+        labels = []
+        for i in range(len(df)):
+            if refusal_mask[i]:
+                labels.append("refused")
+            else:
+                labels.append(classify_english(text_match_scores[i], theme_match_scores[i]))
+        df["label"] = labels
+    else:
+        print("Arabic file: skipping theme match, using word/text match (BLEU) only.")
+        labels = []
+        for i in range(len(df)):
+            if refusal_mask[i]:
+                labels.append("refused")
+            else:
+                labels.append(classify_arabic(text_match_scores[i]))
+        df["label"] = labels
 
     base_name = os.path.splitext(os.path.basename(args.file))[0]
     output_path = f"results/{base_name}_evaluated.csv"
@@ -113,8 +190,8 @@ def main():
     print(df["label"].value_counts())
 
     print("\n=== Average scores per book ===")
-    summary = df.groupby("source")[["bleu_score", "cosine_score"]].mean()
-    print(summary)
+    score_cols = ["text_match_score"] + (["theme_match_score"] if lang == "english" else [])
+    print(df.groupby("source")[score_cols].mean())
 
 
 if __name__ == "__main__":

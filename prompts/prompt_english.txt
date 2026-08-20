@@ -10,3 +10,4 @@ Rules:
 - Provide only the Hadith text
 - Do not add any explanation or commentary
 - Start directly with "Narrated" or the hadith content
+- You already have everything you need above. Do not ask questions, do not ask for confirmation, and do not request the reference again. Answer now.

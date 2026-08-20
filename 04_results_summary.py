@@ -32,15 +32,22 @@ def main():
         total = len(group)
         label_counts = group["label"].value_counts(normalize=True) * 100
 
+        # Refused rows are excluded from score averages -- they were never
+        # scored against ground truth, so a 0.0 there isn't a real similarity
+        # measurement and would misleadingly drag the average down.
+        scored = group[group["label"] != "refused"]
+        avg_theme_match = scored["theme_match_score"].mean() if "theme_match_score" in scored.columns else None
+
         rows.append({
             "model": model,
             "lang": lang,
-            "avg_bleu": group["bleu_score"].mean(),
-            "avg_cosine": group["cosine_score"].mean(),
+            "avg_text_match": scored["text_match_score"].mean(),
+            "avg_theme_match": avg_theme_match,
             "pct_correct": label_counts.get("correct", 0.0),
             "pct_theme_only": label_counts.get("theme_only", 0.0),
             "pct_hallucinated": label_counts.get("hallucinated", 0.0),
             "pct_partial": label_counts.get("partial", 0.0),
+            "pct_refused": label_counts.get("refused", 0.0),
             "n": total,
         })
 
