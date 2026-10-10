@@ -1,0 +1,217 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="hadith-sample" name="Hadith Dataset Sample">
+    <mxGraphModel dx="5744" dy="3604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1722" pageHeight="1276" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;arcSize=6;fillColor=#CDF0D2;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#14742A;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Source&lt;/font&gt;" vertex="1">
+          <mxGeometry height="115" width="185" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;arcSize=6;fillColor=#E8DAFF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#501496;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 28px;&quot;&gt;Chapter No.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="115" width="108" x="213" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;arcSize=6;fillColor=#D2E8FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0A4BA0;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Hadith No.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="115" width="118" x="329" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;arcSize=6;fillColor=#FFF2C2;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#966000;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Chapter Name&lt;br&gt;(Eng + Arabic)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="115" width="228" x="455" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;arcSize=6;fillColor=#D2EED5;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0F6428;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Arabic Text&lt;/font&gt;" vertex="1">
+          <mxGeometry height="115" width="368" x="691" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;arcSize=6;fillColor=#D2E8FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0A4BA0;fontSize=22;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;English Text&lt;/font&gt;" vertex="1">
+          <mxGeometry height="115" width="555" x="1067" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;arcSize=6;fillColor=#D2F5DA;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#14742A;fontSize=26;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Sahih Bukhari&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="185" x="20" y="143" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;arcSize=6;fillColor=#EEE0FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#501496;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="8" vertex="1">
+          <mxGeometry height="155" width="108" x="213" y="143" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=1;arcSize=6;fillColor=#D7E8FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0A4BA0;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="444" vertex="1">
+          <mxGeometry height="155" width="118" x="329" y="143" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;arcSize=6;fillColor=#FFF4C8;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#966000;fontSize=19;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 30px; color: rgb(3, 3, 3);&quot;&gt;Prayers (Salat)&lt;br&gt;كتاب الصلاة&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="228" x="455" y="143" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="rounded=1;arcSize=6;fillColor=#DAF2DC;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0F6428;fontSize=22;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 30px; color: rgb(3, 3, 3);&quot;&gt;إذا دخل أحدكم المسجد فلا يجلس حتى يصلي ركعتين&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="368" x="691" y="143" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="rounded=1;arcSize=6;fillColor=#EBF8EE;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#14235A;fontSize=20;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 30px; background-color: transparent; color: light-dark(rgb(20, 35, 90), rgb(193, 206, 253));&quot;&gt;Narrated Abu Qatada: Allahs Apostle said, If anyone of you enters a mosque, he should pray two rakat before sitting.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="155" width="555" x="1067" y="143" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="rounded=1;arcSize=6;fillColor=#EEE0FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#5A149B;fontSize=26;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Sahih Muslim&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="185" x="20" y="306" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=1;arcSize=6;fillColor=#EEE0FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#501496;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="5" vertex="1">
+          <mxGeometry height="155" width="108" x="213" y="306" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="rounded=1;arcSize=6;fillColor=#D7E8FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0A4BA0;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="434" vertex="1">
+          <mxGeometry height="155" width="118" x="329" y="306" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="rounded=1;arcSize=6;fillColor=#FFF4C8;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#966000;fontSize=19;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 30px; color: rgb(3, 3, 3);&quot;&gt;The Book of Prayers&lt;br&gt;كتاب الصلاة&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="228" x="455" y="306" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="1" style="rounded=1;arcSize=6;fillColor=#DAF2DC;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0F6428;fontSize=22;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 30px; color: rgb(3, 3, 3);&quot;&gt;سووا صفوفكم فإني أراكم من وراء ظهري&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="368" x="691" y="306" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="1" style="rounded=1;arcSize=6;fillColor=#F8EEFF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#14235A;fontSize=20;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Anas b. Malik reported: The Messenger of Allah said: Complete the rows, for I can see you behind my back.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="555" x="1067" y="306" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" style="rounded=1;arcSize=6;fillColor=#FFEBCD;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#A04B00;fontSize=26;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Sunan Abi Dawud&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="185" x="20" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="rounded=1;arcSize=6;fillColor=#EEE0FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#501496;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="1" vertex="1">
+          <mxGeometry height="155" width="108" x="213" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="1" style="rounded=1;arcSize=6;fillColor=#D7E8FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0A4BA0;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="38" vertex="1">
+          <mxGeometry height="155" width="118" x="329" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="1" style="rounded=1;arcSize=6;fillColor=#FFF4C8;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#966000;fontSize=19;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 30px; color: rgb(3, 3, 3);&quot;&gt;Purification (Al-Taharah)&lt;br&gt;كتاب الطهارة&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="228" x="455" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="1" style="rounded=1;arcSize=6;fillColor=#DAF2DC;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0F6428;fontSize=22;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 30px; color: rgb(3, 3, 3);&quot;&gt;نهى رسول الله أن نستنجي بعظم أو بروث&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="368" x="691" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="25" parent="1" style="rounded=1;arcSize=6;fillColor=#FFF5E1;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#14235A;fontSize=20;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Narrated Jabir b. Abd Allah: The Apostle of Allah forbade us to use a bone or dung for wiping.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="555" x="1067" y="469" as="geometry" />
+        </mxCell>
+        <mxCell id="26" parent="1" style="rounded=1;arcSize=6;fillColor=#D2E8FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0A4BA0;fontSize=26;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Jami al-Tirmidhi&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="185" x="20" y="632" as="geometry" />
+        </mxCell>
+        <mxCell id="27" parent="1" style="rounded=1;arcSize=6;fillColor=#EEE0FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#501496;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="2" vertex="1">
+          <mxGeometry height="155" width="108" x="213" y="632" as="geometry" />
+        </mxCell>
+        <mxCell id="28" parent="1" style="rounded=1;arcSize=6;fillColor=#D7E8FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0A4BA0;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="185" vertex="1">
+          <mxGeometry height="155" width="118" x="329" y="632" as="geometry" />
+        </mxCell>
+        <mxCell id="29" parent="1" style="rounded=1;arcSize=6;fillColor=#FFF4C8;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#966000;fontSize=19;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 30px; color: rgb(3, 3, 3);&quot;&gt;The Book on Salat&lt;br&gt;كتاب الصلاة&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="228" x="455" y="632" as="geometry" />
+        </mxCell>
+        <mxCell id="30" parent="1" style="rounded=1;arcSize=6;fillColor=#DAF2DC;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0F6428;fontSize=22;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 30px; color: rgb(3, 3, 3);&quot;&gt;بين كل أذانين صلاة لمن شاء&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="368" x="691" y="632" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="1" style="rounded=1;arcSize=6;fillColor=#E1F0FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#14235A;fontSize=20;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Abdullah bin Mughaffal narrated: the Prophet said, Between every two calls to prayer there is a Salat for whoever wills.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="555" x="1067" y="632" as="geometry" />
+        </mxCell>
+        <mxCell id="32" parent="1" style="rounded=1;arcSize=6;fillColor=#FFEED2;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#9B4605;fontSize=26;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Sunan an-Nasai&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="185" x="20" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="33" parent="1" style="rounded=1;arcSize=6;fillColor=#EEE0FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#501496;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="1" vertex="1">
+          <mxGeometry height="155" width="108" x="213" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="34" parent="1" style="rounded=1;arcSize=6;fillColor=#D7E8FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0A4BA0;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="177" vertex="1">
+          <mxGeometry height="155" width="118" x="329" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="35" parent="1" style="rounded=1;arcSize=6;fillColor=#FFF4C8;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#966000;fontSize=19;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 30px; color: rgb(3, 3, 3);&quot;&gt;The Book of Purification&lt;br&gt;كتاب الطهارة&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="228" x="455" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="36" parent="1" style="rounded=1;arcSize=6;fillColor=#DAF2DC;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0F6428;fontSize=22;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 31px; color: rgb(3, 3, 3);&quot;&gt;توضأ مما غيرت النار&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="368" x="691" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="37" parent="1" style="rounded=1;arcSize=6;fillColor=#FFF6E4;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#14235A;fontSize=20;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;It was narrated that Abu Ayyub said: The Messenger of Allah said: Perform Wudu from that which has been altered by fire.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="555" x="1067" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="38" parent="1" style="rounded=1;arcSize=6;fillColor=#FFD7E8;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#960F37;fontSize=26;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Sunan Ibn Majah&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="185" x="20" y="958" as="geometry" />
+        </mxCell>
+        <mxCell id="39" parent="1" style="rounded=1;arcSize=6;fillColor=#EEE0FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#501496;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="1" vertex="1">
+          <mxGeometry height="155" width="108" x="213" y="958" as="geometry" />
+        </mxCell>
+        <mxCell id="40" parent="1" style="rounded=1;arcSize=6;fillColor=#D7E8FF;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0A4BA0;fontSize=42;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="358" vertex="1">
+          <mxGeometry height="155" width="118" x="329" y="958" as="geometry" />
+        </mxCell>
+        <mxCell id="41" parent="1" style="rounded=1;arcSize=6;fillColor=#FFF4C8;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#966000;fontSize=19;fontStyle=1;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 27px; color: rgb(3, 3, 3);&quot;&gt;Purification and its Sunnah&lt;br&gt;كتاب الطهارة وسننها&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="228" x="455" y="958" as="geometry" />
+        </mxCell>
+        <mxCell id="42" parent="1" style="rounded=1;arcSize=6;fillColor=#DAF2DC;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#0F6428;fontSize=22;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Arial Unicode MS;" value="&lt;font style=&quot;font-size: 30px; color: rgb(3, 3, 3);&quot;&gt;ذهب النبي إلى الغائط بعيدا حين حج&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="368" x="691" y="958" as="geometry" />
+        </mxCell>
+        <mxCell id="43" parent="1" style="rounded=1;arcSize=6;fillColor=#FFEBF5;strokeColor=#AAAAAA;strokeWidth=1.5;fontColor=#14235A;fontSize=20;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Narrated Abdur-Rahman bin Abu Qurad: I went for Hajj with the Prophet and he went far away to relieve himself.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="155" width="555" x="1067" y="958" as="geometry" />
+        </mxCell>
+        <mxCell id="44" parent="1" style="rounded=1;arcSize=6;strokeWidth=1.5;fontSize=15;fontStyle=0;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Helvetica;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="47" width="1370" x="20" y="1133" as="geometry" />
+        </mxCell>
+        <mxCell id="45" parent="1" style="rounded=1;arcSize=3;fillColor=none;strokeColor=#0D2558;strokeWidth=6;" value="" vertex="1">
+          <mxGeometry height="1172" width="1618" x="-410" y="2160" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="&lt;span style=&quot;font-family: Helvetica; font-weight: 700; text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;🔑 Sampling Strategy&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="301" x="9" y="1142" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;fontStyle=1;align=center;shadow=1;gradientColor=#b3b3b3;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Stratified per book&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="228" x="447" y="1142" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-48" parent="1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#f8cecc;gradientColor=#ea6b66;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="20" width="108" x="310" y="1147" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;fontStyle=1;align=center;shadow=1;gradientColor=#b3b3b3;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Random seed = 42&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="270" x="710" y="1142" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-50" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="&lt;span style=&quot;color: rgb(102, 102, 102); font-family: Helvetica; font-style: italic; white-space: nowrap;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;500&amp;nbsp; Hadith × 6 Books = 3,000&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="340" x="1030" y="1141.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-53" parent="1" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#23445d;spacingLeft=8;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Complete Prompt&lt;/font&gt;" vertex="1">
+          <mxGeometry height="26" width="170" x="-690" y="-170" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-54" parent="1" style="text;html=1;strokeColor=#030303;fillColor=#ffffff;align=left;verticalAlign=top;whiteSpace=pre;rounded=0;fontSize=12;fontFamily=Courier New;spacingLeft=12;spacingTop=10;spacingBottom=10;spacingRight=10;strokeWidth=2;" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;You are a Hadith scholar. I will give you a specific Hadith reference.&lt;br&gt;Provide the exact English text of that Hadith only.&lt;br&gt;&lt;br&gt;Book: {source}&lt;br&gt;Chapter Number: {chapter_no}&lt;br&gt;Chapter Name: {chapter}&lt;br&gt;Hadith Number: {hadith_no}&lt;br&gt;&lt;br&gt;Rules:&lt;br&gt;- Provide only the Hadith text&lt;br&gt;- Do not add any explanation or commentary&lt;br&gt;- Start directly with &quot;Narrated&quot; or the hadith content&lt;br&gt;- You already have everything you need above. Do not ask questions,&lt;br&gt;  do not ask for confirmation, and do not request the reference&lt;br&gt;  again. Answer now.&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="255" width="560" x="-690" y="-144" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-55" parent="1" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#23445d;spacingLeft=8;" value="Prompt 1" vertex="1">
+          <mxGeometry height="26" width="100" x="-1040" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-56" parent="1" style="text;html=1;strokeColor=#6c8ebf;fillColor=#ffffff;align=left;verticalAlign=top;whiteSpace=pre;rounded=0;fontSize=12;fontFamily=Courier New;spacingLeft=12;spacingTop=10;spacingBottom=10;spacingRight=10;" value="You are a Hadith scholar. I will give you a specific Hadith reference.&#xa;Provide the exact English text of that Hadith only.&#xa;&#xa;Book: {source}&#xa;Chapter Number: {chapter_no}&#xa;Chapter Name: {chapter}&#xa;Hadith Number: {hadith_no}&#xa;&#xa;Rules:&#xa;- Provide only the Hadith text&#xa;- Do not add any explanation or commentary&#xa;- Start directly with &quot;Narrated&quot; or the hadith content&#xa;- You already have everything you need above. Do not ask questions,&#xa;  do not ask for confirmation, and do not request the reference&#xa;  again. Answer now." vertex="1">
+          <mxGeometry height="248" width="522" x="-1040" y="766" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-57" parent="1" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#5d2323;spacingLeft=8;" value="Prompt 2" vertex="1">
+          <mxGeometry height="26" width="85" x="-395" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-58" parent="1" style="text;html=1;strokeColor=#b85450;fillColor=#ffffff;align=right;verticalAlign=top;whiteSpace=pre;rounded=0;fontSize=12;fontFamily=Courier New;spacingLeft=10;spacingTop=10;spacingBottom=10;spacingRight=12;" value="أنت عالم حديث. سأعطيك مرجعاً محدداً للحديث.&#xa;قدم النص العربي الكامل لهذا الحديث فقط.&#xa;&#xa;الكتاب: {source}&#xa;رقم الباب: {chapter_no}&#xa;اسم الباب: {chapter}&#xa;رقم الحديث: {hadith_no}&#xa;&#xa;القواعد:&#xa;- قدم نص الحديث فقط&#xa;- لا تضف أي شرح أو تعليق&#xa;- ابدأ مباشرة بمتن الحديث&#xa;- لديك بالفعل كل ما تحتاجه أعلاه. لا تطرح أسئلة، ولا تطلب تأكيداً،&#xa;  ولا تطلب المرجع مرة أخرى. أجب الآن." vertex="1">
+          <mxGeometry height="260" width="466" x="-776" y="1106" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-63" parent="1" style="rounded=0;dashed=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#030303;verticalAlign=top;align=left;fontSize=13;fontStyle=1;spacingLeft=10;spacingTop=8;gradientColor=#D5E8D4;strokeWidth=2;perimeterSpacing=0;" value="" vertex="1">
+          <mxGeometry height="145" width="205" x="-1860" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;fontStyle=1;align=center;shadow=1;gradientColor=#b3b3b3;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Stratified per book&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="150" x="-1832.5" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;fontStyle=1;align=center;shadow=1;gradientColor=#b3b3b3;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Random seed = 42&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="150" x="-1832.5" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-66" parent="1" style="text;html=1;fontSize=11;fontStyle=2;align=center;verticalAlign=middle;fontColor=#666666;gradientColor=#030303;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;500&amp;nbsp; Hadith × 6 Books = 3,000&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="205" x="-1860" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-67" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https://fonts.googleapis.com/css?family=Architects+Daughter;" value="&lt;span style=&quot;font-family: Helvetica; font-weight: 700; text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;🔑 Sampling Strategy&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="190" x="-1852.5" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-68" parent="1" style="rounded=0;dashed=1;whiteSpace=wrap;html=1;verticalAlign=top;align=left;fontSize=13;fontStyle=1;spacingLeft=10;spacingTop=8;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;strokeWidth=2;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;🗃 Datasets&lt;/font&gt;" vertex="1">
+          <mxGeometry height="320" width="270" x="-890" y="-500" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-69" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontStyle=1;align=center;shadow=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Sahih al-Bukhari&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="230" x="-867.5" y="-447.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-70" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;align=center;shadow=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Sahih Muslim&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="230" x="-867.5" y="-404.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-71" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;align=center;shadow=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Sunan Abi Da&#39;ud&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="230" x="-867.5" y="-361.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-72" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;align=center;shadow=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Jami&#39; al-Tirmidhi&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="230" x="-867.5" y="-318.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-73" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;align=center;shadow=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Sunan an-Nasa&#39;i&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="230" x="-867.5" y="-275.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-74" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;fontSize=12;fontStyle=1;align=center;shadow=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Sunan Ibn Majah&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="230" x="-867.5" y="-232.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-75" parent="1" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;fontStyle=1;fontSize=12;fontColor=#5d2323;spacingLeft=8;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Complete Prompt&lt;/font&gt;" vertex="1">
+          <mxGeometry height="26" width="170" x="-1520" y="-200" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZ5WrCv1dQ2__Efr-eVB-76" parent="1" style="text;html=1;strokeColor=#030303;fillColor=#ffffff;align=right;verticalAlign=top;whiteSpace=pre;rounded=0;fontSize=12;fontFamily=Courier New;spacingLeft=10;spacingTop=10;spacingBottom=10;spacingRight=12;strokeWidth=2;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;أنت عالم حديث. سأعطيك مرجعاً محدداً للحديث.&lt;br&gt;قدم النص العربي الكامل لهذا الحديث فقط.&lt;br&gt;&lt;br&gt;الكتاب: {source}&lt;br&gt;رقم الباب: {chapter_no}&lt;br&gt;اسم الباب: {chapter}&lt;br&gt;رقم الحديث: {hadith_no}&lt;br&gt;&lt;br&gt;القواعد:&lt;br&gt;- قدم نص الحديث فقط&lt;br&gt;- لا تضف أي شرح أو تعليق&lt;br&gt;- ابدأ مباشرة بمتن الحديث&lt;br&gt;- لديك بالفعل كل ما تحتاجه أعلاه. لا تطرح أسئلة، ولا تطلب تأكيداً،&lt;br&gt;  ولا تطلب المرجع مرة أخرى. أجب الآن.&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="255" width="580" x="-1520" y="-174" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
